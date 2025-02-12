@@ -1,14 +1,11 @@
+import os
 from telethon import TelegramClient, events
 from telethon.sessions import StringSession
 
-# بيانات التطبيق
-api_id = 21794078
-api_hash = "7eb1bfa0ccbd88d1716b756ef23f3587"
+api_id = int(os.getenv("21794078"))  # جلب API_ID من المتغيرات البيئية
+api_hash = os.getenv("7eb1bfa0ccbd88d1716b756ef23f3587")  # جلب API_HASH من المتغيرات البيئية
+session_string = os.getenv("1BJWap1wBuwiHAk2P5Qy5Z8jgZOA6IJHZtWnC5gR9tnl4wR4QtrCHImuzrPXhnVngJK9oaQkMj0shaG9Ssct6Etc3j57KkKVG04Videzl6Mi7PvlFN3KkB2_p50FR92TTLf0WKHncOgmvJT4FlxSJvZn9FdrttEgOwJNPGr07CU05lhEVHxb3MzmEVuFfg3D93KrayHszH6AOlclP1iA7v3UoTO_Qomvb6_joGIY9Y7r-4jViEE2Uh1S9RQ7IWMqqZGXl_xOJBjGZYttx3BdYsLYOJTY-H4LeJiMgV7NmdFPgOvfWVr8gpM-0Mxlo_n2o7DbeBIBdfIPQV17I11iCVPlv1KMP2rM=")  # جلب الجلسة من المتغيرات البيئية
 
-# إنشاء جلسة نصية
-session_string = "1BJWap1wBuwiHAk2P5Qy5Z8jgZOA6IJHZtWnC5gR9tnl4wR4QtrCHImuzrPXhnVngJK9oaQkMj0shaG9Ssct6Etc3j57KkKVG04Videzl6Mi7PvlFN3KkB2_p50FR92TTLf0WKHncOgmvJT4FlxSJvZn9FdrttEgOwJNPGr07CU05lhEVHxb3MzmEVuFfg3D93KrayHszH6AOlclP1iA7v3UoTO_Qomvb6_joGIY9Y7r-4jViEE2Uh1S9RQ7IWMqqZGXl_xOJBjGZYttx3BdYsLYOJTY-H4LeJiMgV7NmdFPgOvfWVr8gpM-0Mxlo_n2o7DbeBIBdfIPQV17I11iCVPlv1KMP2rM="  # استبدل هذا بقيمة الجلسة النصية
-
-# إنشاء عميل Telethon
 client = TelegramClient(StringSession(session_string), api_id, api_hash)
 
 # معرف القناة للبحث
