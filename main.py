@@ -1,3 +1,4 @@
+import keep_alive  # أضف هذا السطر في `main.py`
 import asyncio
 import logging
 import nest_asyncio
