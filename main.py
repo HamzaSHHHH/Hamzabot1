@@ -1,5 +1,3 @@
-import keep_alive  # أضف هذا السطر في `main.py`
-keep_alive.keep_alive()
 import asyncio
 import logging
 import nest_asyncio
@@ -128,7 +126,4 @@ async def main():
     await app.run_polling(close_loop=False)
 
 if __name__ == '__main__':
-    import nest_asyncio
-    nest_asyncio.apply()
-    asyncio.get_event_loop().run_until_complete(main())
-
+    asyncio.run(main())
