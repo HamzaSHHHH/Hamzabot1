@@ -1,6 +1,6 @@
 python-telegram-bot==20.3
 Telethon==1.30
-nest_asyncio
-asyncio
+nest_asyncio==1.6.0
+asyncio==3.4.3
 telegram
-flask
+
